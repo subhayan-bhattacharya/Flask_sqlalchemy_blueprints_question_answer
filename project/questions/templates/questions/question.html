@@ -1,0 +1,30 @@
+    {% extends "base.html" %}
+    {% block title %}
+    <title>Question</title>
+    {% endblock %}
+
+    {% block content %}
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Questions & Answers</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          {{ show_links(user) }}
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <div class="jumbotron">
+        <h1>{{ details['question'] }}</h1>
+        <p>{{ details['answer'] }}</p>
+        <p><a class="btn btn-primary btn-lg">Asked By: {{ details['asked_by'] }}</a></p>
+        <p><a class="btn btn-primary btn-lg">Answered By: {{ details['expert'] }}</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+  {% endblock %}
